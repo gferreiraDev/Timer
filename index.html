@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Contador Regressivo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="styles.css"/>
+    <script src="https://kit.fontawesome.com/92eba56bbc.js" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+  </head>
+  <body>
+    
+    <div id="timer">
+      <h1>Contador Regressivo</h1>
+
+      <div id="display">
+        <div class="box">
+          <button class="arrow-button" onclick="incrementTime('hours')">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+            <input id="hours" type="number" readonly min="0" max="23" value="00"/>
+          <button class="arrow-button" onclick="decrementTime('hours')">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <span>:</span>
+
+        <div class="box">
+          <button class="arrow-button" onclick="incrementTime('minutes')">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+            <input id="minutes" type="number" readonly min="0" max="59" value="00"/>
+          <button class="arrow-button" onclick="decrementTime('minutes')">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+
+        <span>:</span>
+        
+        <div class="box">
+          <button class="arrow-button" onclick="incrementTime('seconds')">
+            <i class="fa-solid fa-chevron-up"></i>
+          </button>
+            <input id="seconds" type="number" readonly min="0" max="59" value="00"/>
+          <button class="arrow-button" onclick="decrementTime('seconds')">
+            <i class="fa-solid fa-chevron-down"></i>
+          </button>
+        </div>
+      </div>
+  
+      <div class="action-row">
+        <button id="start-stop"
+          onclick="globalState.isCounting ? stopTimerCounting() : startTimerCounting()"
+        >Start</button>
+        <button id="start-stop" onclick="resetTimerCounting()">Reset</button>
+      </div>
+    </div>
+    
+  </body>
+</html>
