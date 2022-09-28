@@ -53,7 +53,7 @@ const startTimerCounting = () => {
     formatValue('seconds', seconds);
     globalState.currentTime = globalState.currentTime - 1;
     validateTime();
-  }, 200);
+  }, 1000);
 }
 
 const stopTimerCounting = () => {
